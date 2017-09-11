@@ -1,0 +1,17 @@
+version: '2'
+services:
+  sync_data:
+    image: 
+    environment:
+      - SRC_SERVER=
+      - SRC_DATABASE=
+      - SRC_PORT=
+      - SRC_USERNAME=
+      - SRC_PASSWORD=
+      - DEST_SERVER=
+      - DEST_DATABASE=
+      - DEST_PORT=
+      - DEST_USERNAME=
+      - DEST_PASSWORD=
+      - COMMAND=/application/data-integration/kitchen.sh -file=product/product.kjb
+      - SCHEDULE=0 53 15 * *
